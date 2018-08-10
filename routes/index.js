@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var db = require('../queries');
+var api = require('../api');
 
-router.get('/topActiveUsers', db.getTopActiveUsers);
+router.get('/topActiveUsers', api.getTopActiveUsers);
 //router.get('/users', db.getUser);
 
 module.exports = router;
