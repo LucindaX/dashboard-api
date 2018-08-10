@@ -39,8 +39,7 @@ function getTopActiveUsers(req, res, next){
 function getUser(req, res, next){
   
   var id = req.query.id;
-  console.log("this is id "+ id);
-  
+    
   if(!id) return res.status(422).send("No user id provided");
 
   users.user(id)
@@ -54,7 +53,6 @@ function getUser(req, res, next){
       
       Promise.all(resources).then( values => {
         
-        console.log(values);
         user.companies = values[0];
         user.createdListings = values[1];
 
